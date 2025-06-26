@@ -1,0 +1,72 @@
+This project uses historical Indian state budget data to forecast Non-Plan Budget trends using Linear Regression in Python. 
+The project includes data preprocessing, visualization, machine learning model training, and future prediction from 2011 to 2030.
+
+---
+
+# Dataset Overview
+
+- **File**: `Budget.xlsx`
+- **Fields Used**:
+  - `TimePeriod` – Year (2001 to 2010)
+  - `Area_Name` – State/UT names
+  - `Indicator_Name` – Focused on “Non-Plan Budget”
+  - `Data_Value` – Budget amount (in INR)
+
+---
+
+# Objectives
+
+- Clean and structure raw government budget data
+- Analyze budget growth trends over years
+- Apply **Linear Regression** to forecast future budgets
+- Visualize actual vs. predicted vs. future data
+
+---
+
+# Technologies Used
+
+| Tool          | Purpose                     |
+|---------------|-----------------------------|
+| Python        | Programming language        |
+| Pandas        | Data cleaning & manipulation |
+| Matplotlib    | Data visualization          |
+| scikit-learn  | Linear regression modeling  |
+| Jupyter Notebook | Interactive development  |
+
+---
+
+# Steps Performed
+
+ 1. Data Cleaning
+- Filtered only relevant entries (`Indicator_Name = 'Non-Plan Budget'`)
+- Converted `Data_Value` to numeric
+- Removed missing/null values
+
+ 2. Trend Analysis
+- Grouped average budget by `TimePeriod`
+- Plotted budget growth over time
+
+ 3. Model Training
+- Defined features: `X = TimePeriod`, target: `y = Data_Value`
+- Performed train-test split
+- Trained Linear Regression model using `sklearn`
+
+ 4. Evaluation
+- Evaluated model using:
+  - **MSE (Mean Squared Error)**
+  - **R² Score (Accuracy)**
+
+ 5. Forecasting
+- Created future years (2011–2030)
+- Predicted budgets for those years
+- Plotted actual, predicted, and future forecasts
+
+---
+
+# Results & Insights
+
+- The model showed a good fit with a rising budget trend
+- Future budget estimates suggest a continued increase
+- Such analysis supports **data-driven governance** and **financial planning**
+
+
